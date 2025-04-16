@@ -1,0 +1,17 @@
+.bread{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 140px;
+    text-transform: capitalize;
+}
+
+@media(max-width:500px){
+    .bread{
+        margin: 20px 10px;
+        font-size: 10px;
+    }
+}

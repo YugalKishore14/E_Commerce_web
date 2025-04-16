@@ -1,0 +1,161 @@
+.cart-item{
+    margin: 100px 140px;
+}
+.cart-item hr{
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+.format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 16px;
+    font-weight: 600px;
+}
+.format{
+    font-size: 14px;
+}
+.product-icon{
+    height: 62px;
+}
+.remove-icon{
+    width: 15px;
+    margin: 0px 30px;
+    cursor: pointer;
+}
+.format button{
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+}
+.cart-down{
+    display: flex;
+    margin: 100px 0px;
+}
+.cart-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 30px;
+}
+.cart-total-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    font-size: 14px;
+}
+.cart-total button{
+    width: 202px;
+    height: 45px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.promo{
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+}
+.promo p{
+    color: #555;
+}
+.promobox{
+    width: 460px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 45px;
+    background: #eaeaea;
+}
+.promobox input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 300px;
+    height: 40px;
+}
+.promobox button{
+    border: none;
+    outline: none;
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width:800px){
+    .cart-item{
+        margin: 60px 50px;
+    }
+    .format-main{
+        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 20px;
+        padding: 15px 0px;
+        font-size: 15px;
+    }
+    .product-icon{
+        height: 50px;
+    }
+    .remove-icon{
+        margin: auto;
+    }
+    .format button{
+        width: 40px;
+        height: 30px;
+    }
+    .cart-down{
+        margin: 80px 0px;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .cart-total{
+        margin: 0;
+    }
+    .cart-total button{
+        max-width: 200px;
+        height: 45px;
+        font-size: 13px;
+    }
+    .promobox{
+        width: auto;
+        max-width: 500px;
+    }
+    .promobox input{
+        width: 100%;
+    }
+    .promobox button{
+        width: 120px;
+        margin-left: -121px;
+    }
+}   
+
+@media(max-width:500px){
+    .format-main{
+        display: none;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        gap: 10px;
+    }
+    .format{
+        display: grid;
+        font-size: 12px;
+
+    }
+    .format button{
+        width: 40px;
+        height: 30px;
+        margin-left: 0 !important;
+    }
+
+}
