@@ -15,13 +15,42 @@ function LoginSignUp() {
 
   const login = async () => {
     console.log("Login function executed", formData);
-
+    let responseData;
+    await fetch('https://e-commerce-backend-sme3.onrender.com/login', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    }).then((Response) => Response.json()).then((data) => responseData = data)
+    if (responseData.success) {
+      localStorage.setItem('auth-token', responseData.token);
+      window.location.replace("/");
+    }
+    else {
+      alert(responseData.errors);
+    }
   }
 
   const signup = async () => {
     console.log("Sign Up function executed", formData);
     let responseData;
-    await fetch('')
+    await fetch('https://e-commerce-backend-sme3.onrender.com/signup', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    }).then((Response) => Response.json()).then((data) => responseData = data)
+    if (responseData.success) {
+      localStorage.setItem('auth-token', responseData.token);
+      window.location.replace("/");
+    }
+    else {
+      alert(responseData.errors);
+    }
   }
 
   return (
