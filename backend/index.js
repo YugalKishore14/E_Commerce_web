@@ -215,6 +215,8 @@ app.post("/login", async (req, res) => {
 });
 
 
+
+///////////////////////////////////////////////////////////////////
 // creating endpoint for newcollection data
 app.get('/newcollectiond', async (req, res) => {
     let products = await Product.find({});
@@ -222,7 +224,7 @@ app.get('/newcollectiond', async (req, res) => {
     console.log('NewCollection Fetched');
     res.send(newCollection);
 })
-
+///////////////////////////////////////////////////////////////////
 
 
 app.listen(PORT, () => {

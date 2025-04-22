@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import all_product from "../Component/Assest/all_product"; //
 
 export const ShopContext = createContext(null);
 
@@ -11,14 +12,14 @@ const getDefaultcart = () => {
 };
 
 const ShopContextProvider = (props) => {
-    const [all_product, setAll_product] = useState([]);   //
+    // const [all_product, setAll_product] = useState([]);   //
     const [cartItems, setCartItems] = useState(getDefaultcart());
 
-    useEffect(() => {
-        fetch('https://e-commerce-backend-sme3.onrender.com/allproducts')
-            .then((Response) => Response.json())
-            .then((data) => setAll_product(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://e-commerce-backend-sme3.onrender.com/allproducts')
+    //         .then((Response) => Response.json())
+    //         .then((data) => setAll_product(data))
+    // }, [])
 
     const addTocart = (itemId) => {
         setCartItems((prev) => {
