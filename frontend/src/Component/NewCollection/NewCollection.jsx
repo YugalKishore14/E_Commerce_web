@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./newcollection.css"
 import Item from '../Item/Item'
 import new_collections from '../Assest/new_collections'
 
 function NewCollection() {
 
-
+  ///////////////////////////////////////////////////////////////////////////////////
   // const [new_collection, setNew_collection] = useState([]);
 
   // useEffect(() => {
@@ -13,6 +13,8 @@ function NewCollection() {
   //     .then((res) => res.json())
   //     .then((data) => setNew_collection(data));
   // }, []);
+
+  ////////////////////////////////////////////////////////////////////////////////
 
   return (
     <div className='newCollection'>
