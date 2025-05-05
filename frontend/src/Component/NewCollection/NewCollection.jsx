@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./newcollection.css"
 import Item from '../Item/Item'
-import new_collections from '../Assest/new_collections'
+import new_collection from '../Assest/new_collections'
 
 function NewCollection() {
 
@@ -22,7 +22,7 @@ function NewCollection() {
       <hr />
       <div className="collection">
         {
-          new_collections.map((item, i) => {
+          new_collection.map((item, i) => {
             return <Item key={i} id={item.id} name={item.name} img={item.image} old_price={item.old_price} new_price={item.new_price} />
           })
         }
