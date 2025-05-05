@@ -215,8 +215,6 @@ app.post("/login", async (req, res) => {
 });
 
 
-
-///////////////////////////////////////////////////////////////////
 // creating endpoint for newcollection data
 app.get('/newcollection', async (req, res) => {
     let products = await Product.find({});
@@ -224,7 +222,15 @@ app.get('/newcollection', async (req, res) => {
     console.log('NewCollection Fetched');
     res.send(newCollection);
 })
-///////////////////////////////////////////////////////////////////
+
+// creating endpoint for popular in women collection
+app.get('/populoarwomen', async (req, res) => {
+    let products = await Product.find({ category: "women" });
+    let popular_in_women = products.slice(0, 4);
+    console.log("Popular in women fetched");
+    res.send(popular_in_women);
+
+})
 
 
 app.listen(PORT, () => {
