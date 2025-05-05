@@ -18,22 +18,24 @@ function CartItems() {
       {
         all_product.map(e => {
           if (cartItems[e.id] > 0) {
-            return <div>
-              <div className="format format-main">
-                <img src={e.image} alt="" className='product-icon' />
-                <p>{e.name}</p>
-                <p style={{ marginLeft: "10px" }}>₹ {e.new_price}</p>
-                <button style={{ marginLeft: "10px" }} className='quantity'>{cartItems[e.id]}</button>
-                <p style={{ marginLeft: "10px" }}>₹ {e.new_price * cartItems[e.id]}</p>
-                <img src={remove_icon} className='remove-icon' onClick={() => { removeFromCart(e.id) }} alt="" />
+            return (
+              <div key={e.id}>
+                <div className="format format-main">
+                  <img src={e.image} alt="" className='product-icon' />
+                  <p>{e.name}</p>
+                  <p style={{ marginLeft: "10px" }}>₹ {e.new_price}</p>
+                  <button style={{ marginLeft: "10px" }} className='quantity'>{cartItems[e.id]}</button>
+                  <p style={{ marginLeft: "10px" }}>₹ {e.new_price * cartItems[e.id]}</p>
+                  <img src={remove_icon} className='remove-icon' onClick={() => removeFromCart(e.id)} alt="" />
+                </div>
+                <hr />
               </div>
-              <hr />
-            </div>
-          }
-          else {
+            );
+          } else {
             return null;
           }
         })
+
       }
       <div className="cart-down">
         <div className="cart-total">
@@ -55,7 +57,6 @@ function CartItems() {
             </div>
           </div>
           <button>PROCEED TO CHECKOUT</button>
-
         </div>
         <div className="promo">
           <p>if you have a promo code, Enter it here</p>

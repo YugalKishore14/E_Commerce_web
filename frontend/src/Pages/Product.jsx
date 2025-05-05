@@ -8,20 +8,20 @@ import Related from '../Component/RealatedProduct/Related'
 
 function Product() {
 
-  const {all_product} = useContext(ShopContext)
-  const {productId}  = useParams()
-  const product = all_product.find((e)=> e.id === Number(productId))
+  const { all_product } = useContext(ShopContext)
+  const { productId } = useParams()
+  const product = all_product.find((e) => e.id === Number(productId))
 
   return (
-   <>
-   <div >
-   <Breadcrum product={product} />
-   <ProductDisplay product={product} />
-   <Discrip/>
-   <Related/>
-   </div>
-   </>
-    
+    <>
+      <div >
+        <Breadcrum product={product} />
+        <ProductDisplay product={product} />
+        <Discrip />
+        <Related />
+      </div>
+    </>
+
   )
 }
 

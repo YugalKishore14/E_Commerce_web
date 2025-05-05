@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
-import  "./Css/shopcategory.css"
+import "./Css/shopcategory.css"
 import { ShopContext } from '../Context/ShopContext'
 import drop_down from "../Component/Assest/dropdown_icon.png"
 import Item from '../Component/Item/Item'
 
 function ShopCategory(props) {
 
-  const {all_product} = useContext(ShopContext)
+  const { all_product } = useContext(ShopContext)
   return (
-   <div className="shopcategory" >
+    <div className="shopcategory" >
       <img className="cate-banner" src={props.banner} alt="" />
       <div className="shopcategary-indexsort">
         <p>
@@ -20,12 +20,12 @@ function ShopCategory(props) {
       </div>
       <div className="shopcategory-product">
         {
-          all_product.map((item,i)=>{
-            if(props.category===item.category){
-              return <Item key={i} id={item.id} name={item.name} img={item.image} old_price={item.old_price}  new_price={item.new_price}/>
+          all_product.map((item, i) => {
+            if (props.category === item.category) {
+              return <Item key={i} id={item.id} name={item.name} img={item.image} old_price={item.old_price} new_price={item.new_price} />
             }
-            else{
-              console.log("null")
+            else {
+              // console.log("null")
             }
           })
         }
@@ -33,7 +33,7 @@ function ShopCategory(props) {
       <div className="shopcategory-loadmore">
         Explore More
       </div>
-   </div>
+    </div>
   )
 }
 

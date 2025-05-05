@@ -585,6 +585,14 @@ app.get("/popularwomen", async (req, res) => {
     }
 });
 
+
+app.post('/addtocart', async (req, res) => {
+
+
+})
+
+
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

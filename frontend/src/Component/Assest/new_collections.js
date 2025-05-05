@@ -7,6 +7,7 @@ import p6_img from "./product_2.png";
 import p7_img from "./product_17.png";
 import p8_img from "./product_28.png";
 
+
 let new_collections = [
   {
     id: 12,
@@ -65,5 +66,6 @@ let new_collections = [
     old_price: 150.0,
   },
 ];
+
 
 export default new_collections;
